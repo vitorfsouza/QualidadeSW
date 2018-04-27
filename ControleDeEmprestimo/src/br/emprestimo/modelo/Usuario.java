@@ -20,6 +20,9 @@ public class Usuario {
 	}
 
 	public void setNome(String nome) {
+		if (nome == "" | nome == null) {
+			throw new RuntimeException("Nome invalido");
+		}
 		this.nome = nome;
 	}
 
