@@ -20,13 +20,17 @@ public class Emprestimo {
 		}
 		this.livro = livro;
 	}
+	
 
 	public Usuario getUsuario() {
 		return usuario;
 	}
 
 	public void setUsuario(Usuario usuario) {
-		this.livro = livro;
+		if(usuario == null) {
+			throw new RuntimeException("Dados Invalidos");
+		}
+		this.usuario = usuario;
 	}
 
 	public String getDataEmprestimo() {
