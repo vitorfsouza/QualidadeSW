@@ -115,7 +115,16 @@ public class UC01RegistraEmprestimoDeLivro {
 		assertTrue(resultadoObtido);
 	}
 	
-	
+	@Test
+	public void CT11VerificarSeADataDeEntregaEhDomingo() {
+		//cenario
+		String data="20/05/2018";
+		Emprestimo umEmprestimo = new Emprestimo();
+		//Ação
+		boolean resultadoObtido = umEmprestimo.ehDomingo(data);
+		//verificação
+		assertTrue(resultadoObtido);
+	}
 	
 	
 	
